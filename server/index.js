@@ -1,26 +1,22 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const passport = require('passport');
-const session = require('express-session');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const passport = require('passport');
 const dotenv = require('dotenv');
+const connectDB = require('./data/db');
+const userRoles = require('./config/roles');
+
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI;
 const SECRET_KEY = process.env.SECRET_KEY;
 
-// Database connection
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-})
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(error => console.error('MongoDB connection error:', error));
+connectDB();
 
-// Middleware
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   session({
@@ -32,9 +28,16 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Passport config
 require('./config/passport')(passport);
 
-// Routes
+app.use(userRoles.middleware());
+
 const authRoutes = require('./routes/auth');
-const userRoutes
+const userRoutes = require('./routes/user');
+
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
