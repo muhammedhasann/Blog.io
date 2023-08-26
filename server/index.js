@@ -34,9 +34,12 @@ app.use(userRoles.middleware());
 
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
+const imageRoutes = require('./image');
 
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
+
+router.use(imageRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

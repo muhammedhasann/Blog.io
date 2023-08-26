@@ -47,4 +47,35 @@ module.exports = {
       res.status(500).render('posts', { error: 'An error occurred while fetching posts.' });
     }
   },
+  //search 
+    async searchPosts(req, res) {
+    try {
+      const query = req.query.q;
+      const posts = await Post.find({ $text: { $search: query } }).populate('user').populate('category').populate('tags').populate('images');
+      res.render('posts', { posts });
+    } catch (error) {
+      res.status(500).render('posts', { error: 'An error occurred while searching for posts.' });
+    }
+  },
+
+  async getPaginatedPosts(req, res) {
+    try {
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 10;
+      const skip = (page - 1) * limit;
+      const posts = await Post.find().skip(skip).limit(limit).populate('user').populate('category').populate('tags').populate('images');
+      res.render('posts', { posts });
+    } catch (error) {
+      res.status(500).render('posts', { error: 'An error occurred while fetching paginated posts.' });
+    }
+  },
+
+  async getPostsApi(req, res) {
+    try {
+      const posts = await Post.find().populate('user').populate('category').populate('tags').populate('images');
+      res.json(posts);
+    } catch (error) {
+      res.status(500).json({ error: 'An error occurred while fetching posts.' });
+    }
+  },
 };
