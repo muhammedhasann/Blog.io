@@ -1,0 +1,429 @@
+{
+  "info": {
+    "_postman_id": "Blog",
+    "name": "Your API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/logout",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/categories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["categories"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/categories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "categories"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/categories",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["categories"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/categories/:categoryId",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["categories", ":categoryId"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Categories API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/categories/:categoryId/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["categories", ":categoryId", "delete"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Images Upload API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/images/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["images", "upload"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Images Delete API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/images/:imageId/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["images", ":imageId", "delete"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Images Gallery API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/images/gallery",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["images", "gallery"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts Edit API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/posts/:postId/edit",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":postId", "edit"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts Create API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts Update API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/posts/:postId",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":postId"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts Delete API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/posts/:postId/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":postId", "delete"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts Search API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/posts/search",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", "search"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts Paginated API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/posts/paginated",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", "paginated"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Posts API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "posts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tags API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/tags",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tags"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tags API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/tags",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tags"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tags API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/tags",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tags"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tags API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/tags",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tags"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tags API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/tags/:tagId",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tags", ":tagId"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tags API",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:3000/tags/:tagId/delete",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tags", ":tagId", "delete"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dashboard API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/dashboard",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["dashboard"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Profile API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/profile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["profile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Single Post API",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/posts/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["posts", ":id"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

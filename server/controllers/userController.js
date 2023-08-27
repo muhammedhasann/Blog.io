@@ -4,6 +4,7 @@ module.exports = {
   async profile(req, res) {
     res.render('profile', { user: req.user });
   },
+  
 
   async editProfilePage(req, res) {
     res.render('edit-profile', { user: req.user });

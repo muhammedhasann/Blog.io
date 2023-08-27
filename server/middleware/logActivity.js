@@ -1,5 +1,4 @@
-// middlewares/logActivity.js
-const logger = require('../logger'); // Path to your Winston logger instance
+const logger = require('../utils/logger.js');
 
 const logActivity = (action) => {
   return (req, res, next) => {

@@ -1,11 +1,10 @@
-// logger.js
 const winston = require('winston');
 
 const logger = winston.createLogger({
-  level: 'info', // Set the log level
+  level: 'info',
   format: winston.format.combine(
     winston.format.timestamp(),
-    winston.format.json() // Use JSON format for logs
+    winston.format.json()
   ),
   transports: [
     new winston.transports.File({ filename: 'activity.log' }),

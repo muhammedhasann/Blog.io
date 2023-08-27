@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
   subscription: { type: mongoose.Schema.Types.ObjectId, ref: 'SubscriptionPlan' },
   readFreeArticles: { type: Number, default: 0 },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
-
 });
 
 const User = mongoose.model('User', userSchema);

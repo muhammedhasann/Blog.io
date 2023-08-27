@@ -1,4 +1,3 @@
-// middlewares/checkFreeArticleLimit.js
 const User = require('../models/User');
 
 const checkFreeArticleLimit = async (req, res, next) => {
