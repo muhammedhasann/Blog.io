@@ -6,7 +6,6 @@ This is a full-stack blog application built using the MERN (MongoDB, Express, Re
 ## Features
 
 - User Registration and Authentication
-- Role-Based Access Control (RBAC)
 - Create, Read, Update, and Delete (CRUD) operations for blog posts
 - Category and Tag Management
 - Image Management and Gallery View
@@ -16,17 +15,40 @@ This is a full-stack blog application built using the MERN (MongoDB, Express, Re
 - Activity Logging for user actions
 - Subscription Plans with Free and Paid options
 
-## Technology Stack
 
-- **Frontend:** React
-- **Backend:** Node.js, Express
-- **Database:** MongoDB
-- **Authentication:** Passport.js, JWT (JSON Web Tokens)
-- **Roles and Permissions:** accesscontrol, connect-roles
-- **Logging:** Winston
-- **Image Upload:** Cloudinary (or other chosen library)
-- **Subscription Management:** Custom implementation (or payment gateway integration like Stripe)
-- **Other Dependencies:** bcrypt, express-validator, mongoose, ... (others you've used)
+## Tech Stack
+
+### Frontend
+- ![React](https://img.shields.io/badge/React-%2361dafb.svg?style=for-the-badge&logo=react&logoColor=white)
+
+### Backend
+- ![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white)
+- ![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?style=for-the-badge)
+
+### Database
+- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
+### Authentication
+- ![Passport.js](https://img.shields.io/badge/Passport.js-%23333333.svg?style=for-the-badge)
+- ![JWT](https://img.shields.io/badge/JWT-%23000000.svg?style=for-the-badge&logo=json-web-tokens)
+
+### Roles and Permissions
+- ![accesscontrol](https://img.shields.io/badge/accesscontrol-%23008f8f.svg?style=for-the-badge)
+- ![connect-roles](https://img.shields.io/badge/connect--roles-%233a3a3a.svg?style=for-the-badge)
+
+### Logging
+- ![Winston](https://img.shields.io/badge/Winston-%23366c91.svg?style=for-the-badge)
+
+### Image Upload
+- ![Multer](https://img.shields.io/badge/Multer-%238cc84b.svg?style=for-the-badge)
+- ![Cloudinary](https://img.shields.io/badge/Cloudinary-%230070cc.svg?style=for-the-badge)
+
+### Other Dependencies
+- ![bcrypt](https://img.shields.io/badge/bcrypt-%2399925b.svg?style=for-the-badge)
+- ![express-validator](https://img.shields.io/badge/express--validator-%23cc2927.svg?style=for-the-badge)
+- ![mongoose](https://img.shields.io/badge/mongoose-%23880000.svg?style=for-the-badge)
+- ...
+
 
 ## Getting Started
 
@@ -41,6 +63,16 @@ This is a full-stack blog application built using the MERN (MongoDB, Express, Re
 - Create, edit, and delete your own blog posts.
 - Explore and interact with different features of the application.
 
+  
+# Postman API Collection
+
+To test and interact with the API endpoints, download and import the [Postman API Collection](link-to-postman-collection).
+
+# API Documentation
+
+For detailed information about available endpoints and their usage, please refer to the [API documentation](link-to-api-docs).
+
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to enhance the application, feel free to submit a pull request.
@@ -50,4 +82,3 @@ Contributions are welcome! If you find any issues or want to enhance the applica
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
