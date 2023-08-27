@@ -17,6 +17,7 @@ This is a full-stack blog application built using the MERN (MongoDB, Express, Re
 
 
 ## Tech Stack
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 
 ### Frontend
 - ![React](https://img.shields.io/badge/React-%2361dafb.svg?style=for-the-badge&logo=react&logoColor=white)

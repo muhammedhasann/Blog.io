@@ -14,7 +14,6 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 connectDB();
 
-app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -34,12 +33,19 @@ app.use(userRoles.middleware());
 
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
-const imageRoutes = require('./image');
 
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 
-router.use(imageRoutes);
+const categoryRoutes = require('./routes/category');
+const imageRoutes = require('./routes/image');
+const postRoutes = require('./routes/post');
+const tagRoutes = require('./routes/tag');
+
+app.use('/category', categoryRoutes);
+app.use('/image', imageRoutes);
+app.use('/post', postRoutes);
+app.use('/tag', tagRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
