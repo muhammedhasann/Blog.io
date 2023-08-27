@@ -7,6 +7,10 @@ module.exports = {
     }
     res.status(401).json({ error: 'Unauthorized' });
   },
+  validateUserProfile: [
+    body('name').notEmpty().withMessage('Name is required.'),
+    body('email').isEmail().withMessage('Invalid email address.'),
+  ],
 
   ensureAuthorized(roles) {
     return (req, res, next) => {

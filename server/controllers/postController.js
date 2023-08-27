@@ -31,13 +31,25 @@ module.exports = {
 
   async deletePost(req, res) {
     try {
-      const { postId } = req.params;
-      await Post.findByIdAndDelete(postId);
-      res.redirect('/posts');
+      const postId = req.params.id;
+      const post = await Post.findById(postId);
+
+      if (!post) {
+        return res.status(404).json({ error: 'Post not found' });
+      }
+
+      // Check user role before allowing deletion
+      if (req.user.role === 'admin' || req.user.id === post.user.toString()) {
+        await post.remove();
+        res.json({ message: 'Post deleted successfully' });
+      } else {
+        res.status(403).json({ error: 'Unauthorized' });
+      }
     } catch (error) {
-      res.status(500).render('posts', { error: 'An error occurred while deleting the post.' });
+      res.status(500).json({ error: 'An error occurred' });
     }
   },
+
 
   async getPostsPage(req, res) {
     try {

@@ -16,14 +16,13 @@ module.exports = {
       user.name = name;
       user.email = email;
       await user.save();
-      res.redirect('/user/profile');
+      res.redirect('/profile');
     } catch (error) {
       res.status(500).render('edit-profile', { user: req.user, error: 'An error occurred while updating the profile.' });
     }
   },
 
-  // Include password change logic
-  // ...
+
 
   async dashboard(req, res) {
     res.render('dashboard');

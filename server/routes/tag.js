@@ -9,5 +9,7 @@ router.get('/tags', ensureAuthorized(['admin']), tagController.getTagsPage);
 router.post('/tags', ensureAuthorized(['admin']), tagController.createTag);
 router.post('/tags/:tagId', ensureAuthorized(['admin']), tagController.updateTag);
 router.post('/tags/:tagId/delete', ensureAuthorized(['admin']), tagController.deleteTag);
+router.get('/tags', tagController.getTagsPage);
+router.get('/api/tags', tagController.getTagsApi);
 
 module.exports = router;
